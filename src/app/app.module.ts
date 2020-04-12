@@ -9,6 +9,8 @@ import { FormComponent } from './form/form.component';
 import { RouteComponent } from './route/route.component';
 import { ValidityComponent } from './validity/validity.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { CountPipe } from './count.pipe';
+import { UnderlineDirective } from './underline.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { RepositoryComponent } from './repository/repository.component';
     FormComponent,
     RouteComponent,
     ValidityComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    CountPipe,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,
