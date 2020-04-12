@@ -8,6 +8,7 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { FormComponent } from './form/form.component';
 import { RouteComponent } from './route/route.component';
 import { ValidityComponent } from './validity/validity.component';
+import { RepositoryComponent } from './repository/repository.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ValidityComponent } from './validity/validity.component';
     UserprofileComponent,
     FormComponent,
     RouteComponent,
-    ValidityComponent
+    ValidityComponent,
+    RepositoryComponent
   ],
   imports: [
     BrowserModule,

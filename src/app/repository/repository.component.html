@@ -1,23 +1,24 @@
 <div class="container-fluid">
-  <form class="form">
+<form class="form">
     <h3>This is an application that can be used to search for a users<br> projects just using his or her username on Github.Please enter username below</h3>
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Search projects using the owners' username" name="repo" [(ngModel)]="username" title="Please enter the Username" required><br><br>
         <button class="btn btn-success btn-lg" (click) = "showRepos()">Submit</button>
     </div>
 
-    <hr>
-    <a class="nav-item nav-link" routerLink="/profile" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  Users</button></a>
-    <div class="card-title">
-      <h3>All Repos</h3>
-    </div>
-    <hr>
-  </form>
-  <div class="card" id="repository">
+<hr>
+<a class="nav-item nav-link" routerLink="/profile" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  Users</button></a>
+<div class="card-title">
+    <h3>All Repos</h3>
+ </div>
+<hr>
+</form>
+<div class="card" id="repository">
     <div class="card-body" *ngFor = "let repo of repos">
         <p appUnderline>{{repo.name}}</p> <a href="{{repo.html_url}}" target="blank"><button class="btn btn-lg btn-warning pull-right" >View on Github</button>
         </a>
         <p>Description : {{repo.description}}</p>
     </div>
-  </div>
+</div>
+
 </div>
