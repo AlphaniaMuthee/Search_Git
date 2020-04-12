@@ -16,10 +16,10 @@ import { CountPipe } from './count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
+    UserprofileComponent,
     FormComponent,
-    RepositoriesComponent,
-    InvalidComponent,
+    RepositoriyComponent,
+    ValidityComponent,
     UnderlineDirective,
     CountPipe
   ],
