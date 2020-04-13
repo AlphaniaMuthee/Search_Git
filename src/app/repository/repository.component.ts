@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Repo} from '../repo'
-import {ReposEnquiryService} from '../repos-probe.service';
-import {ServicesService} from '../userprofile/service.service';
+import {ReposProbeService} from '../repos-probe.service';
+import {ServiceService} from '../userprofile/service.service';
 
 @Component({
   selector: 'app-repository',

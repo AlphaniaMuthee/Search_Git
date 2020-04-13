@@ -18,7 +18,7 @@ import { CountPipe } from './count.pipe';
     AppComponent,
     UserprofileComponent,
     FormComponent,
-    RepositoriyComponent,
+    RepositoryComponent,
     ValidityComponent,
     UnderlineDirective,
     CountPipe
@@ -30,7 +30,7 @@ import { CountPipe } from './count.pipe';
     FormsModule,
     RoutingModule,
   ],
-  providers: [ServicesService],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

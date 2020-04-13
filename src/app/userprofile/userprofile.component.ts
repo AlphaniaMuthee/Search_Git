@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ServiceService} from './service.service';
+import {ReposProbeService} from '../repos-probe.service'
+import {User} from '../user'
 
 @Component({
   selector: 'app-userprofile',
