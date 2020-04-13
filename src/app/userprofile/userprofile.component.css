@@ -1,0 +1,19 @@
+img{
+  border-radius: 440px;
+  width: 250px;
+  height: 250px;
+}
+.card{
+  text-align: center;
+  background-color: aliceblue;
+}
+button{
+  width: 300px;
+}
+#work {
+  text-align: center;
+  padding: 50px 50px;
+}
+#info {
+  text-align: center;
+}

@@ -5,7 +5,7 @@ import { environment } from '.././environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ReposEnquiryService {
+export class ReposProbeService {
   repos : any;
   private Username : string;
 
@@ -21,7 +21,7 @@ export class ReposEnquiryService {
     })
     return promise
   }
-  updateprofile(username : string){
+  updateuserprofile(username : string){
     this.Username = username
 
   }

@@ -1,62 +1,64 @@
-<form class="form">
-    <h3>This is only used to find existing user profiles;<br>Please enter your username</h3>
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search users using the username" name="username" [(ngModel)]="username" title="Username" required>
-        <br><br>
-        <button class="btn btn-success btn-lg" (click) = addUser()>Submit</button>
-    </div>
-    <hr>
-    <p class="form">
-        Incase you wish to find the repositories of the user please click the button below
-    </p>
-
-<a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  repositories</button></a>
-<hr>
-</form>
-<div *ngIf= "userprofiles">
-    <div class="card">
-        <div class="card-title" appUnderline>
-            {{userprofiles.login}},<small>({{userprofiles.name}})</small>,<br>
-            <span *ngIf ="userprofiles.company">Works at {{userprofiles.company}}</span>
-            <span *ngIf = "userprofiles.location">:{{userprofiles.location}}</span>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-5">
-                    <img src={{userprofiles.avatar_url}} class="img-circle img-responsive">
-                </div>
-                <div class="col-md-5">
-                    <ul class="list-group">
-                        <li class="list-group-item" *ngIf = "userprofiles.bio">
-                            {{userprofiles.bio}}
-                        </li>
-                        <li class="list-group-item" *ngIf ="profiles.email">
-                            {{userprofiles.email}}
-                        </li>
-                    </ul>
-                    <div class="col-md-3">
-                        <p>
-                            <span >
-                             {{userprofiles.followers}}<br>followers
-                            </span>
-                            <br>
-                            <span>
-                                {{userprofiles.following}}<br>following
-                            </span>
-                            <span >
-                                 repos : {{userprofiles.public_repos}}
-                            </span>
-                            <span>
-                                Created on : {{userprofiles.created_at| date}}
-                            </span>
-                        </p>
-                        <p><a href="{{userprofiles.html_url}}" target="blank"><button class="btn btn-success btn-md">Github_profile</button></a></p>
-                    </div>
-                </div>
-
+<div class= "container-fluid" id="file">
+    <div class="row" id="work">
+        <form class="form">
+          <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" alt="logo">
+          <h1>Github Search</h1>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter github username" name="username" [(ngModel)]="username" title="Username" required>
+                <br><br>
+                <button (click) = addUser()>Find User</button>
             </div>
+            <p>
+                To find repositories, click on;
+            </p>
+        <a class="nav-item nav-link" routerLink="/repos" routerLinkActive='active'><button>Get Repos Instead</button></a>
+        </form>
+      </div>
+        <div *ngIf= "userprofiles">
+            <div class="card">
+                <div class="card-title" appUnderline>
+                    {{userprofiles.login}},<small>({{userprofiles.name}})</small>,<br>
+                    <span *ngIf ="userprofiles.company">Works at {{userprofiles.company}}</span>
+                    <span *ngIf = "userprofiles.location">:{{userprofiles.location}}</span>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src={{userprofiles.avatar_url}} class="img-circle img-responsive">
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="list-group">
+                                <li class="list-group-item" *ngIf = "userprofiles.bio">
+                                    {{userprofiles.bio}}
+                                </li>
+                                <li class="list-group-item" *ngIf ="userprofiles.email">
+                                    {{userprofiles.email}}
+                                </li>
+                            </ul>
+                            <div class="col-md-3">
+                                <p>
+                                    <span >
+                                     {{userprofiles.followers}}<br>followers
+                                    </span>
+                                    <br>
+                                    <span>
+                                        {{userprofiles.following}}<br>following
+                                    </span>
+                                    <span >
+                                         repos : {{userprofiles.public_repos}}
+                                    </span>
+                                    <span>
+                                        Created on : {{userprofiles.created_at| date}}
+                                    </span>
+                                </p>
+                                <p><a href="{{userprofiles.html_url}}" target="blank"><button>View on Github</button></a></p>
+                            </div>
+                        </div>
 
-        </div>
-    </div>
+                    </div>
 
+                </div>
+              </div>
+
+  </div>
 </div>

@@ -1,24 +1,35 @@
-<div class="container-fluid">
+<div class="container-fluid" id="rep">
+  <div class="row">
+    <div class="col-md-6">
 <form class="form">
-    <h3>This is an application that can be used to search for a users<br> projects just using his or her username on Github.Please enter username below</h3>
+  <img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/64/social_media_logo_github-512.png" alt="icon" height="100px" width="100px">
+    <h3>Search for user repositories here</h3>
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search projects using the owners' username" name="repo" [(ngModel)]="username" title="Please enter the Username" required><br><br>
-        <button class="btn btn-success btn-lg" (click) = "showRepos()">Submit</button>
+        <input type="text" class="form-control" placeholder="Enter the repository" name="repo" [(ngModel)]="username" title="Please enter the Username" required><br><br>
+        <button (click) = "showRepos()">Submit</button>
     </div>
-
-<hr>
-<a class="nav-item nav-link" routerLink="/userprofile" routerLinkActive='active'><button class="btn btn-lg btn-warning ">Search for  Users</button></a>
-<div class="card-title">
-    <h3>All Repos</h3>
- </div>
-<hr>
 </form>
-<div class="card" id="repository">
-    <div class="card-body" *ngFor = "let repo of repos">
-        <p appUnderline>{{repo.name}}</p> <a href="{{repo.html_url}}" target="blank"><button class="btn btn-lg btn-warning pull-right" >View on Github</button>
-        </a>
-        <p>Description : {{repo.description}}</p>
-    </div>
-</div>
 
+<hr>
+<a class="nav-item nav-link" routerLink="/userprofile" routerLinkActive='active'><button>Get users Instead</button></a>
+</div>
+<div class="col-md-6">
+<div class="cards">
+  <div class="card-title">
+      <h3>Repositories</h3>
+  </div>
+  <hr>
+  <div class="card" id="repository">
+      <div class="card-body" *ngFor = "let repo of repos">
+        <ul>
+          <li><p appUnderline>{{repo.name}}</p>
+            <p>Description : {{repo.description}}</p>
+            <a href="{{repo.html_url}}" target="blank"><button>View on Github</button>
+          </a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+</div>
+</div>
 </div>

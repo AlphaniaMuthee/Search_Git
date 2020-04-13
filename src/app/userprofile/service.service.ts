@@ -20,7 +20,7 @@ export class ServiceService {
 
   getuserprofile(){
     let promise = new Promise((resolve)=>{
-    return this.http.get("https://api.github.com/users/" + this.Username + "?client_id =" + environment.clientId+ "&client_secret=" + environment.clientsecret).toPromise().then(profiles =>{
+    return this.http.get("https://api.github.com/users/" + this.Username + "?client_id =" + environment.clientId+ "&client_secret=" + environment.clientsecret).toPromise().then(userprofiles =>{
       this.userprofiles = userprofiles
       resolve()
     })

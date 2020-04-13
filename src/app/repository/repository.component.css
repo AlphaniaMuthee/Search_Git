@@ -1,0 +1,22 @@
+.container-fluid{
+    text-align: center;
+}
+.form{
+    text-align: center;
+    padding: 100px 100px;
+}
+#rep {
+  background-image: url("https://image.freepik.com/free-photo/rectangle-neon-light-with-blackground-concrete-floor-ultraviolet-3d-render_33739-402.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.cards {
+  background-color: black;
+}
+.card-body {
+  background-color: black;
+}
+button{
+    width: 400px;
+}

@@ -12,12 +12,12 @@ export class UserprofileComponent implements OnInit {
   username : string;
   userprofiles : any;
 
-  constructor(public findprofile : ServiceService) {
+  constructor(public finduserprofile : ServiceService) {
 
   }
   addUser(){
     this.finduserprofile.updateuserprofile(this.username);
-    this.finduserprofile.getprofile();
+    this.finduserprofile.getuserprofile();
     this.userprofiles = this.finduserprofile.userprofiles
     console.log(this.userprofiles)
   }
